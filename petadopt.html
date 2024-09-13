@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawsNow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <style>
+       
+       :root{
+    --orange:#f9ba60;
+    --blue:#4C516D;
+    --black: #1d1c1c;
+    --white: #fff;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding: 3rem 7%;
+}
+
+.heading{
+  font-size: 4rem;
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 6rem;
+}
+
+.heading span{
+  color: var(--orange);
+  text-transform: uppercase;
+}
+
+.btn{
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .8rem 3rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--orange);
+  color: var(--orange);
+  background: none;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* header */
+
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.header .logo i{
+  color: var(--orange);
+}
+
+.header .navbar a{
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+
+.header .navbar a:hover,
+.header .icons div:hover{
+  color: var(--orange);
+}
+
+.header .icons div{
+  font-size: 2.5rem;
+  margin-left: 1.7rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+#menu-btn{
+  display: none;
+}
+.home{
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.home .content{
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+}
+
+.home .content h3{
+  font-size: 6rem;
+  color: var(--black);
+}
+
+.home .content h3 span{
+  color: var(--orange);
+}
+
+.home .content p{
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.animal {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.animal img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.animal h3 {
+  margin: 10px 0;
+}
+
+.animal p {
+  margin: 5px 0;
+}
+
+.animal button {
+    font-size: 1.7rem;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .8rem 3rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--orange);
+  color: var(--orange);
+  background: none;
+  cursor: pointer;
+}
+
+.animal button:hover {
+    background: var(--orange);
+  color: var(--white);
+}
+
+.footer{
+  background: var(--blue);
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.2rem;
+  color: var(--orange);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  color: var(--white);
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.footer .box-container .box a{
+  display: block;
+  font-size: 1.4rem;
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+  color: var(--orange);
+}
+
+.footer .box-container .box a i{
+  padding-right: .5rem;
+  color: var(--orange);
+}
+
+.footer .credit{
+  margin-top: 2.5rem;
+  padding: 1rem;
+  padding-top: 2rem;
+  border-top: .1rem solid rgba(0,0,0,.3);
+  text-align: center;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.footer .credit span{
+  color: var(--orange);
+}
+
+</style> 
+</head>
+<body>
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-paw"></i>PawsNow</a>
+
+        <nav class="navbar">
+            <a href="petmain.html">Home</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="container">
+            <div class="animal">
+               <img src="https://i.pinimg.com/originals/c6/7a/ca/c67acaa595117b2b9a46ebdf5bf53198.jpg" height="250px">
+              <h3>Ozzy</h3>
+              <p>Male, 5 months</p>
+              <p>Maharashtra</p>
+              <a href="petadopt1.html" class="btn">MORE ABOUT ME</a>
+            </div>
+        
+            <div class="animal">
+              <img src="https://i.pinimg.com/originals/8a/db/5b/8adb5b4e502524a9a58da412f57502f6.jpg" height="250px">
+              <h3>ELSA</h3>
+              <p>Female, 8 months</p>
+              <p>Delhi</p>
+              <a href="petadopt1.html" class="btn">MORE ABOUT ME</a>
+            </div>
+
+            <div class="animal">
+               <img src="https://th.bing.com/th/id/OIP.EANW0jKnlRZylPpk1n-DZgHaE8?w=229&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" height="250px">
+               <h3>OREO</h3>
+               <p>Female, 3 years</p>
+               <p>Pune,Maharashtra</p>
+               <a href="petadopt1.html" class="btn">MORE ABOUT ME</a>
+            </div>
+
+            <div class="animal">
+               <img src="https://3.bp.blogspot.com/-J3LjkPzZ0Ek/WTwvea0l4TI/AAAAAAAAjco/lEZ7xPJJI7k7Pnorva4LhmLH9dFceHr1QCLcB/s1600/Kieferkitttjun17.JPG" height="250px">
+               <h3>OLIVER</h3>
+               <p>Male, 3 years</p>
+               <p>Karnataka</p>
+               <a href="petadopt1.html" class="btn">MORE ABOUT ME</a>
+            </div>
+
+            <div class="animal">
+               <img src="https://i.pinimg.com/originals/45/e5/63/45e5639327ab1a5d7acac7ccf95d65ce.jpg" height="250px">
+               <h3>LUNA</h3>
+               <p>Female, 4 years</p>
+               <p>Gurgaon,  Haryana</p>
+               <a href="petadopt1.html" class="btn">MORE ABOUT ME</a>
+            </div>
+
+            <div class="animal">
+                <img src="https://i.pinimg.com/736x/1e/36/ee/1e36ee053a3be0ec57480e334ac4b9ee.jpg" height="250px">
+                <h3>OSCAR</h3>
+                <p>Male, 3 years</p>
+                <p>Kolkata,  West Bengal</p>
+                <a href="petadopt1.html" class="btn">MORE ABOUT ME</a>
+             </div>
+    </section>
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> <i class="fas fa-paw"></i> PawsNow </h3>
+                <p>a place where compassion meets a forever home</p>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="petlogin.html"> <i class="fas fa-caret-right"></i> log in</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> adoption documentation </a>
+                <a href="#"> <i class="fas fa-caret-right"></i> home visits</a>
+            </div>
+
+            <div class="box">
+                <h3>category</h3>
+                <a href="#"> <i class="fas fa-caret-right"></i> about us</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> visions</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> news & events</a>
+                <a href="#contact"> <i class="fas fa-caret-right"></i> contact us</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"> <i class="fas fa-caret-right"></i> privacy policy</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> terms of use</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> FAQs</a>
+            </div>
+
+        </div>
+
+        <div class="credit"> &copy; copyright @ 2023 by <span>PawsNow</span></div>
+
+    </section>
